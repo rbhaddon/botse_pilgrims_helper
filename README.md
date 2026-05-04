@@ -1,4 +1,4 @@
-# botse_pilgrims_helper
+# BotSE Pilgrim's Helper
 BotSE Pilgrim's Helper - Randomly draw a Class sheet for Wayfarer ability.
 
 ## Usage
@@ -9,3 +9,6 @@ I prefer a tidier game table with only the components out that I need. Digging t
 
 ## Wayfarer
 Click the Wayfarer button to perform that Pilgrim ability. The app will randomly select a Class sheet for you and only show the options available to Wayfarer (i.e., Interrupt and Enduring abilities are omitted). If you drew a Class in play or one from an expansion you do not own, just click 'Draw Again'.
+
+## Browse
+This feature lets you browse all the Class sheets. Click between Novice or Master to see both sides.
