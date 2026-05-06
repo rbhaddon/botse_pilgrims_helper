@@ -279,6 +279,7 @@
       text-transform: uppercase;
       color: var(--gold-hi);
     }
+    .class-heading .const-icon { margin-left: 0.4em; vertical-align: middle; }
 
     .upgrade {
       display: flex;
@@ -489,6 +490,7 @@ function iconify(text) {
 const C = [
   {
     name: 'Acrobat',
+    constellation: 'thief',
     novice: {
       upgrade: 'Move into 10 different hexes in a single turn.',
       passive: 'After you defeat an enemy, you may immediately move up to 4 hexes. You may move through units during this movement.',
@@ -513,6 +515,7 @@ const C = [
   },
   {
     name: 'Arcanist',
+    constellation: 'mage',
     novice: {
       upgrade: 'Defeat a {{daedra}} enemy using your Fatecarver class ability.',
       passive: 'After you defeat an enemy while in {{magic}}, place 1 crux token here (max of 3). Start each session with 1 crux token here. Abilities that require crux tokens must use crux tokens from this sheet and cannot be performed if the required crux tokens are not available.',
@@ -538,6 +541,7 @@ const C = [
   },
   {
     name: 'Archer',
+    constellation: 'warrior',
     novice: {
       upgrade: 'Defeat an enemy that is 6 or more hexes away.',
       passive: 'At the start of your turn, if you are in {{ranged}}, deal 2 damage to a targetable enemy.',
@@ -562,6 +566,7 @@ const C = [
   },
   {
     name: 'Bard',
+    constellation: 'thief',
     novice: {
       upgrade: 'Complete the Bard Harder side quest.',
       passive: 'Once per any unit\'s turn, reroll any 1 die rolled by a unit within 2 hexes of you, including yourself.',
@@ -587,6 +592,7 @@ const C = [
   },
   {
     name: 'Burglar',
+    constellation: 'thief',
     novice: {
       upgrade: 'Gain 4 items in a single battle',
       passive: 'Add 1 attempt to all your lockpick checks. After succeeding at a lockpick check, gain 1 tenacity.',
@@ -612,6 +618,7 @@ const C = [
   },
   {
     name: 'Dragonknight',
+    constellation: 'warrior',
     novice: {
       upgrade: 'End a battle with 1 HP.',
       passive: 'If there are more undefeated enemies than undefeated party members, ignore 1 defense on your target.',
@@ -636,6 +643,7 @@ const C = [
   },
   {
     name: 'Healer',
+    constellation: 'mage',
     novice: {
       upgrade: 'Trigger Master Ritualist, the level 4 Restoring Light skill die, from your active slots.',
       passive: 'At the start of your turn, you may gain 1 light fatigue to heal yourself or an adjacent party member for 1 HP.',
@@ -661,6 +669,7 @@ const C = [
   },
   {
     name: 'Knight',
+    constellation: 'warrior',
     novice: {
       upgrade: 'Complete 2 side quests with your party in a single session.',
       passive: 'After the party gains a side quest, heal to full HP or gain 3 tenacity.',
@@ -686,6 +695,7 @@ const C = [
   },
   {
     name: 'Necromancer',
+    constellation: 'mage',
     novice: {
       upgrade: 'Have 3 or more chips in your Necrosis Stack when you are defeated.',
       passive: 'If at least 1 enemy took damage during your engage, place 1 HP chip here (max 6). This is your Necrosis Stack.',
@@ -708,6 +718,7 @@ const C = [
   },
   {
     name: 'Nightblade',
+    constellation: 'mage',
     novice: {
       upgrade: 'Defeat a level 10/20 enemy or a quest unit while you have a Stealth status die in your cooldown track.',
       passive: 'When a Stealth status die is removed or recovered from your cooldown track, you may move up to 4 hexes.',
@@ -733,6 +744,7 @@ const C = [
   },
   {
     name: 'Pilgrim',
+    constellation: 'thief',
     novice: {
       upgrade: 'Have all 8 attribute slots on your adventurer mat filled with stats and skill lines.',
       passive: 'All trainers in town populate 1 additional skill line.',
@@ -758,6 +770,7 @@ const C = [
   },
   {
     name: 'Ranger',
+    constellation: 'warrior',
     novice: {
       upgrade: 'Successfully complete encounters at unstable landmarks on 3 consecutive days.',
       passive: 'The party\'s base overland movement is increased by 1.',
@@ -784,6 +797,7 @@ const C = [
   },
   {
     name: 'Rogue',
+    constellation: 'thief',
     novice: {
       upgrade: 'Have a level 2 skill die trained in 2 different {{thief}} type skill lines.',
       passive: 'When engaged by an adjacent enemy, prevent 1 damage dealt to you for each miss rolled.',
@@ -809,6 +823,7 @@ const C = [
   },
   {
     name: 'Scout',
+    constellation: 'thief',
     novice: {
       upgrade: 'Successfully complete a non-quest delve encounter.',
       passive: 'Interrupt: After deploying enemies at the start of a clash or dungeon, you may swap the positions of 2 non-quest enemies.',
@@ -834,6 +849,7 @@ const C = [
   },
   {
     name: 'Sorcerer',
+    constellation: 'mage',
     novice: {
       upgrade: 'Have {{party_size}} + 2 enchantments active at the same time.',
       passive: 'If you start your turn in {{magic}}, gain 1 tenacity.',
@@ -858,6 +874,7 @@ const C = [
   },
   {
     name: 'Spellsword',
+    constellation: 'warrior',
     novice: {
       upgrade: 'Have a total of 8 skill dice trained across the {{warrior}} skill line and any {{mage}} type skill lines.',
       passive: 'Once per turn, you may drain 1 available level 1 skill die to trigger the effect of any of its {{warrior}} sides as if you are performing an engage.',
@@ -883,6 +900,7 @@ const C = [
   },
   {
     name: 'Templar',
+    constellation: 'warrior',
     novice: {
       upgrade: 'Deal at least 4 damage and heal at least 4 HP on the same turn, across any number of units.',
       passive: 'If you start your turn in {{defensive}}, heal for 1 HP.',
@@ -908,6 +926,7 @@ const C = [
   },
   {
     name: 'Warden',
+    constellation: 'mage',
     novice: {
       upgrade: 'Defeat a level 10/20 enemy or quest unit with the Diving Cliff Racer or Feral Guardian companion.',
       passive: 'After a {{beast}} companion is defeated, heal yourself for 3 HP.',
@@ -1033,7 +1052,8 @@ function renderCard() {
   const d = cls[tier];
   const body = document.getElementById('cardBody');
 
-  let h = `<div class="class-heading"><h2>${cls.name}</h2></div>`;
+  const constIcon = cls.constellation ? `<span class="const-icon">${iconify(`{{${cls.constellation}}}`)}</span>` : '';
+  let h = `<div class="class-heading"><h2>${cls.name}${constIcon}</h2></div>`;
   if (tier === 'novice' && d.upgrade) {
     h += `<div class="upgrade">
       <span class="upg-label">Upgrade</span>
@@ -1070,7 +1090,8 @@ function renderWayfarer() {
   const eligible = d.skills.filter(s => !s.i && !s.e);
   const body = document.getElementById('wayfarerBody');
 
-  let h = `<div class="class-heading"><h2>${cls.name}</h2></div>`;
+  const constIcon = cls.constellation ? `<span class="const-icon">${iconify(`{{${cls.constellation}}}`)}</span>` : '';
+  let h = `<div class="class-heading"><h2>${cls.name}${constIcon}</h2></div>`;
   h += `<div class="skills-hdr">Available Skills</div>`;
   if (eligible.length === 0) {
     h += `<p style="padding:1rem;color:var(--text-dim);font-size:0.82rem">No triggerable skills on this side.</p>`;
